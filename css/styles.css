@@ -1,0 +1,333 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
+}
+
+.mom-card {
+  position: relative;
+  top: 50px;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform: perspective(2500px);
+  transition: 4s;
+}
+
+.mom-card .back {
+  position:absolute;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  backface-visibility: visible;
+  filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.5));
+  transform-style: preserve-3d;
+  transform: perspective(800px) rotateY(0deg);
+  transition: all 0.8s ease-in-out;
+
+}
+
+.mom-card .card-inside {
+  text-align: center;
+  position: absolute;
+  background-color: lightpink;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  z-index: -1;
+  top: 0;
+  border: 10px solid #fff;
+}
+
+.inside-text {
+  position: absolute;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 400;
+ font-size: 1.5rem;
+ line-height: 2.5rem;
+ text-align: center;
+ top: 0;
+ color: #fff;
+}
+
+.best {
+  float: left;
+}
+
+.cursive {
+  font-family: "Cedarville Cursive", sans-serif;
+  font-weight: 400;
+}
+
+.mom-card:hover {
+  transform: perspective(2500px) rotate(0deg);
+  box-shadow: inset 100px 20px 100px rgba(0,0,0,.15), 0 10px 100px rgba(0,0,0,0.3);
+  }
+
+  .mom-card:hover .card-front {
+    transform: perspective(800px) rotateY(-160deg);
+  }
+
+.mom-card:hover .front-text {
+  display: none;
+}
+
+.mom-card:hover #pad {
+  display: none;
+}
+
+.mom-card:hover #pad2 {
+  display: none;
+}
+
+.mom-card:hover #pad3 {
+  display: none;
+}
+
+.card-front {
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: lightpink;
+  overflow: hidden;
+  transform-origin: left;
+  transition: .2s;
+  border: 10px solid #fff;
+}
+
+.front-text {
+  position: absolute;
+  top: 150px;
+  right: 85px;
+  padding: 10px;
+  border-style: solid;
+  border-width: medium;
+  border-color: #fff;
+  color: #fff;
+  backface-visibility: hidden;
+}
+
+#pad {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  bottom: 30px;
+  left: 220px;
+  animation-name: lily;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes lily {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(359deg);
+  }
+}
+
+.l1 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.l2 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.l3 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.l4 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+#pad2 {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  bottom: 30px;
+  left: 30px;
+  animation-name: lily2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes lily2 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(359deg);
+  }
+}
+
+.l5 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.l6 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.l7 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.l8 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+#pad3 {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  bottom: 30px;
+  right: 30px;
+  animation-name: lily3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes lily3 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(359deg);
+  }
+}
+
+.l9 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+
+.l10 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.l11 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  left: 0;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+.l12 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 0;
+  right: 0;
+  border-style: solid;
+  background-color: #fff;
+  border-color: lightgreen;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
